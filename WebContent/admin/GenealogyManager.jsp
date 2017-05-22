@@ -21,8 +21,7 @@
 
     <!-- Main content -->
      <%
-	ArrayList<Genealogy> list = new ArrayList<>();
-	list = (ArrayList)request.getAttribute("list");
+	ArrayList<Genealogy> list = (ArrayList<Genealogy>)request.getAttribute("list");
     %>
     <section class="content">
       <!-- Small boxes (Stat box) -->
@@ -66,7 +65,7 @@
                         <h4 class="modal-title" id="myModalLabel">Edit Genealogy</h4>
                     </div>
                     <div class="modal-body" >
-                        <form data-toggle="validator" id="form-edit-genealogy-submit" action="EditGenealogyServlet" method = "post">
+                        <form data-toggle="validator" id="form-edit-genealogy-submit" action="EditGenealogyManagerServlet" method = "post">
                             <input type="hidden" name="id" value="<%=i.getId() %>" class="edit-id">
                             <div class="form-group">
                                 <label>Name</label>

@@ -44,7 +44,7 @@
 </head>
 <body>
 	<%
-		User user = (User) request.getSession().getAttribute(LoginServlet.USER_SESSION);		
+		User user = (User) request.getSession().getAttribute(LoginServlet.USER_SESSION);
 	%>
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
@@ -88,8 +88,7 @@
 					%>
 					<li><a href="#" style="width: auto;"> Welcome <b><%=user.getEmail()%></b></a>
 					</li>
-					<li><a
-						href="<%=request.getContextPath()%>/LogoutServlet"
+					<li><a href="<%=request.getContextPath()%>/LogoutServlet"
 						style="width: auto;"><span class="glyphicon glyphicon-log-in"></span>
 							Logout</a></li>
 					<%
@@ -102,6 +101,15 @@
 					<li><a href="register.jsp" role="button"> <span
 							class="glyphicon glyphicon-log-in"></span> Register
 					</a></li>
+					<%
+						}
+						if (user != null && user.getRoles() > 2) {
+					%>
+					<li><a href="<%=request.getContextPath()%>/UserManagerServlet"
+						style="width: auto;"><span class="glyphicon glyphicon-log-in"></span>
+							Go to Admin page</a></li>
+
+
 					<%
 						}
 					%>

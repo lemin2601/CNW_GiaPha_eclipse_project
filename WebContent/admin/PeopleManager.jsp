@@ -22,8 +22,7 @@
 
     <!-- Main content -->
       <%
-	ArrayList<People> list = new ArrayList<>();
-	list = (ArrayList)request.getAttribute("list");
+	ArrayList<People> list = (ArrayList<People>)request.getAttribute("list");
     %>
     <section class="content col-sm-12">
       <!-- Small boxes (Stat box) -->

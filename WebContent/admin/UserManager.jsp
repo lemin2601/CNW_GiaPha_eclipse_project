@@ -3,6 +3,11 @@
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>    
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 <%@include file="header.jsp"%>
@@ -22,8 +27,7 @@
 
     <!-- Main content -->
     <%
-	ArrayList<User> list = new ArrayList<>();
-	list = (ArrayList)request.getAttribute("list");
+	ArrayList<User> list = (ArrayList<User>)request.getAttribute("list");
     %>
     <section class="content">
       <!-- Small boxes (Stat box) -->
@@ -67,7 +71,7 @@
                         <h4 class="modal-title" id="myModalLabel">Edit User</h4>
                     </div>
                     <div class="modal-body" >
-                        <form data-toggle="validator" id="form-edit-genealogy-submit" action="EditUserServlet" method = "post">
+                        <form data-toggle="validator" id="form-edit-genealogy-submit" action="EditUserManagerServlet" method = "post">
                             <input type="hidden" name="id" value="<%=i.getId() %>" class="edit-id">
                             <div class="form-group">
                                 <label>User Name</label>

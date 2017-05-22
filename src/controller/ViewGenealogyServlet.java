@@ -136,7 +136,7 @@ public class ViewGenealogyServlet extends HttpServlet {
 		if (list == null) {
 			return null;
 		}
-		list.forEach((item) -> {
+		for(People item:list){
 			JSONObject jObj = new JSONObject();
 			jObj.put("id", item.getId());
 			jObj.put("firstname", item.getFirstname());
@@ -147,7 +147,7 @@ public class ViewGenealogyServlet extends HttpServlet {
 			jObj.put("address", item.getAddress());
 			
 			dataJSon.put(item.getId(), jObj);
-		});
+		}
 		JSONObject dataResult = new JSONObject();
 		dataResult.put("item", dataJSon);
 		
