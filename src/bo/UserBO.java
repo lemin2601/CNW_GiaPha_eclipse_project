@@ -3,8 +3,6 @@ package bo;
 import dao.KeyDAO;
 import dao.UserDAO;
 import java.util.ArrayList;
-import library.ScratchSpace;
-import library.SendEmail;
 import model.Key;
 import model.User;
 
@@ -50,14 +48,14 @@ public class UserBO {
 
     public int addItem(User item) {
         //add key
-        String key = ScratchSpace.createLicenseKey(item.getUsername(), item.getEmail(), "create");
-        _KEY.addItem(new Key(System.currentTimeMillis(), item.getId(), key));
-        // send email
-        sendEmailActive(item.getEmail(), key);
+//        String key = ScratchSpace.createLicenseKey(item.getUsername(), item.getEmail(), "create");
+//        _KEY.addItem(new Key(System.currentTimeMillis(), item.getId(), key));
+//        // send email
+//        sendEmailActive(item.getEmail(), key);
         return _DAO.addItem(item);
     }
 
-    private void sendEmailActive(String email, String key) {
+    /*private void sendEmailActive(String email, String key) {
         String subject = "[GIA PHẢ] ACTIVE";
         String body = "<h1>Gia Phả xin chào</h1>\n"
                 + "please click here to active: <a href='" + BASE_URL + "/User?command=active&key=" + key + "'>link here</a>\n"
@@ -69,7 +67,7 @@ public class UserBO {
             }
         });
         thread.start();
-    }
+    }*/
 
     public int activeItem(String key) {
         // get id by key

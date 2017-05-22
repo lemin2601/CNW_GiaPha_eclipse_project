@@ -5,6 +5,7 @@
  */
 package model;
 
+import java.io.InputStream;
 import java.util.Date;
 
 /**
@@ -19,12 +20,12 @@ public class People {
     String alias;
     Date birth;
     Date dead;
-    boolean sex;
+    int sex;
     String address;
     long id_genealogy;
-    String img;
+    InputStream img;
 
-    public People(long id, String firstname, String lastname, String alias, Date birth, Date dead, boolean sex, String address, long id_genealogy, String img) {
+    public People(long id, String firstname, String lastname, String alias, Date birth, Date dead, int sex, String address, long id_genealogy, String img) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -34,8 +35,17 @@ public class People {
         this.sex = sex;
         this.address = address;
         this.id_genealogy = id_genealogy;
-        this.img = img;
     }
+    public People(long id, String firstname, String lastname, Date birth, Date dead, int sex, String address) {
+		super();
+		this.id = id;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.birth = birth;
+		this.dead = dead;
+		this.sex = sex;
+		this.address = address;
+	}
 
     
     @Override
@@ -51,7 +61,12 @@ public class People {
         this.id = id;
     }
 
-    public String getFirstname() {
+    public int getSex() {
+		return sex;
+	}
+
+
+	public String getFirstname() {
         return firstname;
     }
 
@@ -91,11 +106,11 @@ public class People {
         this.dead = dead;
     }
 
-    public boolean isSex() {
+    public int isSex() {
         return sex;
     }
 
-    public void setSex(boolean sex) {
+    public void setSex(int sex) {
         this.sex = sex;
     }
 
@@ -115,11 +130,11 @@ public class People {
         this.id_genealogy = id_genealogy;
     }
 
-    public String getImg() {
+    public InputStream getImg() {
         return img;
     }
 
-    public void setImg(String img) {
+    public void setImg(InputStream img) {
         this.img = img;
     }
 

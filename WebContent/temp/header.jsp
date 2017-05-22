@@ -1,4 +1,4 @@
-<%@page import="controller.UserServlet"%>
+<%@page import="controller.LoginServlet"%>
 <%@page import="model.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
@@ -28,7 +28,7 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <%
-                            User user = (User) session.getAttribute(UserServlet.USER_SESSION);
+                            User user = (User) session.getAttribute(LoginServlet.USER_SESSION);
                             if (user == null) {
                         %>
                         <li><a href="<%=request.getContextPath()%>/register.jsp"><span

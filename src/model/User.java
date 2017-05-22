@@ -15,6 +15,13 @@ public class User {
         this.roles = roles;
     }
 
+    public User(long id, String username, String email, int roles) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.email = email;
+		this.roles = roles;
+	}
     public int getRoles() {
         return roles;
     }

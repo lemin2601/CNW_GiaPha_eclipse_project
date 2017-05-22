@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Date;
 import library.DBConnect;
 import model.User;
 import net.sf.json.JSONObject;
@@ -13,7 +12,7 @@ import net.sf.json.JSONObject;
 public class UserDAO {
 
     private static final String TABLE_NAME = "users";
-    private static final String COL_ID = "id";
+    private static final String COL_ID = "id_user";
     private static final String COL_USERNAME = "username";
     private static final String COL_PASSWORD = "pass";
     private static final String COL_EMAIL = "email";

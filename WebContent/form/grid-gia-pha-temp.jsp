@@ -12,8 +12,8 @@
                     <div id="tree" class="tree" style="zoom:100% ;height:85vh; width: 1000vh;">
                         <ul>
                             <li>
-                                <a class="btn btn-default" role="button">
-                                    <div style=" display: inline-block;" data-toggle="tooltip" title="Ông cụ tổ" data-placement="bottom"
+                                <a>
+                                    <div class="btn btn-success"  style=" display: inline-block;" data-toggle="tooltip" title="Ông cụ tổ" data-placement="bottom"
                                          class="view-item">                          
                                         <img class="w3-circle" style="width: 100px;height: 100px;" src="../img/ongto.jpg" alt="Person">
                                         <div class="w3-container">
@@ -21,7 +21,7 @@
                                             <p>26/01/1995 - 20/20/2200</p>
                                         </div>
                                     </div>
-                                    <div style=" display: inline-block;"  data-toggle="tooltip" title="Bà cụ tổ" data-placement="bottom"
+                                    <div  class="btn btn-success" role="button" style=" display: inline-block;"  data-toggle="tooltip" title="Bà cụ tổ" data-placement="bottom"
                                          class="view-item">
                                         <img class="img-thumbnail" style="width: 100px;height: 100px;" src="../img/bato.jpg" alt="Person">
                                         <div class="w3-container">
